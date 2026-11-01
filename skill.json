@@ -1,0 +1,25 @@
+{
+  "name": "genpark-personal-agent-cognitive-rumination-worry-curfew-skill",
+  "version": "1.0.0",
+  "description": "Applies Borkovec stimulus control worry containment, computes Pre-Sleep Cognitive Hyperarousal Index (PSCHI), and models cognitive arousal decay.",
+  "tools": [
+    {
+      "name": "process_worry_inventory_and_curfew",
+      "description": "Processes worry thoughts, checks curfew breach, and calculates pre-sleep hyperarousal index.",
+      "parameters": {
+        "intrusive_thoughts_json": "string (JSON array of thought objects)",
+        "current_time_24h": "float (default 22.5)",
+        "bedtime_24h": "float (default 23.5)",
+        "curfew_buffer_hours": "float (default 2.5)"
+      }
+    },
+    {
+      "name": "simulate_arousal_decay_trajectory",
+      "description": "Simulates 60-minute pre-sleep cognitive arousal decay under active containment vs passive rumination.",
+      "parameters": {
+        "starting_pschi": "float (default 68.0)",
+        "intervention": "string (default 'cognitive_defusion_and_curfew')"
+      }
+    }
+  ]
+}
